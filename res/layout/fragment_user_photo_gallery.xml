@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/cachecolor"
+    android:orientation="vertical"
+    android:padding="4dp" >
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cachecolor"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/txtVwSearchContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/result_for_user"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtVwPaging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="10dp"
+                android:text="@string/paging_feed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_item"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imgBtnPrevFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/back_button"
+                    android:contentDescription="@string/none" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnNexFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/next_button"
+                    android:contentDescription="@string/none" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+	<GridView 
+	    android:id="@+id/galleryPhotoUser"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/white"
+	    android:columnWidth="130dp"
+	    android:gravity="center"
+	    android:horizontalSpacing="3dp"
+	    android:numColumns="auto_fit"
+	    android:stretchMode="columnWidth"
+	    android:verticalSpacing="3dp" />
+ </LinearLayout>

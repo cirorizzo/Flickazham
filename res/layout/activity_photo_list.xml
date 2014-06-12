@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/none"
+    tools:context="com.android.flickazham.PhotoList"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/linear_toplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/cachecolor"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/txtVwSearchContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/result_for_user"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtVwPaging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="10dp"
+                android:text="@string/paging_feed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_item"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imgBtnPrev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/back_button"
+                    android:contentDescription="@string/none"
+                    android:onClick="prevBtnClick" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/next_button"
+                    android:contentDescription="@string/none"
+                    android:onClick="nextBtnClick" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_toplayout" >
+
+    </ListView>
+
+</RelativeLayout>

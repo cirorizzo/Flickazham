@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/splash_background_color"
+    tools:context="com.android.flickazham.FlickazhamStartActivity" >
+
+    <TextView
+        android:id="@+id/subtitle_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="192dp"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:padding="@dimen/all_pourpose_padding"
+        android:text="@string/main_splash_subtitle"
+        android:textColor="@color/splash_subtitle_color_light"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/main_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/subtitle_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:padding="@dimen/all_pourpose_padding"
+        android:text="@string/main_splash_title"
+        android:textColor="@color/splash_title_color_light"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle_author_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/subtitle_content"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:padding="@dimen/all_pourpose_padding"
+            android:text="@string/main_splash_subtitle_author"
+            android:textColor="@color/splash_subtitle_author_color_light"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+</RelativeLayout>
